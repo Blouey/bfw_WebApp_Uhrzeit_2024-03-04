@@ -1,0 +1,27 @@
+﻿@model DateTime
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <h1>Aktuelles Datum</h1>
+    @{
+        DateTime dt = DateTime.Now;
+        string datum = dt.ToString("dd.MMMM.yyyy");
+    }
+    <p> Das aktuelle Datum ist : @datum</p>
+    
+    <p>Das Datum in 2 Tagen : @Model.ToLongDateString()</p>
+    
+
+</div>
+</body>
+</html>
